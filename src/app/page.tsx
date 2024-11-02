@@ -1,24 +1,47 @@
+"use client";
+import KachelRotation from "@/components/KachelRotation";
 import TypingEffect from "@/components/TypingEffect";
-import { IoCloseCircle } from "react-icons/io5";
+import { motion } from "framer-motion";
+import { IoCloseCircle, IoLogoJavascript, IoLogoReact } from "react-icons/io5";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col">
-      <div className="mx-52 mt-5 flex h-96 flex-col rounded-2xl border-2 bg-zinc-900">
-        <IoCloseCircle size={40} className="ml-auto" />
-        <div className="flex h-full w-full rounded-b-2xl border-t-2 p-5">
-          <TypingEffect delay={100} className="text-4xl font-bold">
+      <div className="mx-auto mt-10 flex h-96 min-h-fit w-full max-w-4xl flex-col rounded-2xl border-2 bg-zinc-900">
+        <div className="flex items-center border-b-2">
+          <div className="ml-4 text-2xl font-bold">Terminal</div>
+          <IoCloseCircle size={40} className="my-1 ml-auto mr-2" />
+        </div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          className="flex h-full w-full rounded-b-2xl p-5"
+        >
+          <TypingEffect delay={50} className="text-2xl font-bold">
             Hi there, I&apos;m Jelena <br />
             I&apos;m a frontend developer who loves to learn new things.
             <br />
-            For example like how this website is hosted on a own vps with
+            One example is this page, it&apos;s self hosted on a vps with
             coolify.
             <br />
             <br />
-            So you see I like to make things my own instead of just using
-            predefined services.
+            So feel free to take a look around and contact me.
           </TypingEffect>
-        </div>
+        </motion.div>
+      </div>
+      <h2
+        className="mt-10 text-center text-4xl font-bold italic"
+        style={{ fontFamily: "var(--font-geist-sans)" }}
+      >
+        The stuff I work with in my free time
+      </h2>
+      <div className="mx-auto mt-10 grid aspect-square w-[40rem] max-w-4xl">
+        <KachelRotation
+          icons={[
+            <IoLogoJavascript key={1} size={60} className="m-auto" />,
+            <IoLogoReact key={2} size={60} className="m-auto" />,
+          ]}
+        />
       </div>
     </main>
   );
