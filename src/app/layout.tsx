@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} overflow-x-hidden bg-gradient-to-t from-purple-600 to-indigo-600 px-4 text-white`}
+        className={`${geistSans.variable} ${geistMono.variable} min-h-screen overflow-x-hidden bg-gradient-to-t from-purple-600 to-indigo-600 px-4 text-white`}
       >
         <Navbar />
         {children}
