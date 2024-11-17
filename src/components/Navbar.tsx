@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import { FaRegFolder, FaRegFolderOpen } from "react-icons/fa";
 import { PiDevToLogoFill } from "react-icons/pi";

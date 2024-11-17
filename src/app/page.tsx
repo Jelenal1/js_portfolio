@@ -1,8 +1,9 @@
 "use client";
 import DVDKachel from "@/components/DVDKachel";
 import Terminal from "@/components/Terminal";
+import Link from "next/link";
 import { BiLogoJavascript, BiLogoTypescript } from "react-icons/bi";
-import { FaJava } from "react-icons/fa";
+import { FaHandPointRight, FaJava } from "react-icons/fa";
 import { SiNextdotjs } from "react-icons/si";
 
 export default function Home() {
@@ -12,7 +13,7 @@ export default function Home() {
         Hi there, I&apos;m Jelena <br />
         I&apos;m a frontend developer who loves to learn new things.
         <br />
-        One example is this page, it&apos;s self hosted on a vps with coolify.
+        One example is this site, it&apos;s self hosted on a vps with coolify.
         <br />
         <br />
         So feel free to take a look around and contact me. <br />
@@ -31,7 +32,10 @@ export default function Home() {
           />
         </div>
         <br />
-        Follow the white rabbit.
+        <Link href="/projects" className="flex items-center gap-4">
+          <FaHandPointRight />
+          <span>My projects</span>
+        </Link>
       </Terminal>
     </main>
   );
